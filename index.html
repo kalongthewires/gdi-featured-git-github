@@ -40,6 +40,7 @@
         <section>
           <img src = "images/gdi_logo_badge.png">
           <h3>Intro to Git and Github</h3>
+          <p>Slides: <a href="">{{ bitly link }}</a></p>
         </section>
 
         <!-- Welcome-->
@@ -105,7 +106,7 @@
         </section>
         <section>
           <section>
-            <h3>Brief history of Version Control</h3>
+            <h3>Brief History of Version Control</h3>
             <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
             <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
             <p><span class ="green">2005</span> -- Git (well, Git)</p>
@@ -139,7 +140,7 @@
           <p>Goals of Git Design</p>
           <ul>
             <li>Fast -- add to your team and code base quickly</li>
-            <li>Distributed (see slide above) </li>
+            <li>Distributed (see previous slide) </li>
             <li>Each commit has a corresponding hash (track changes from everyone)</li>
             <li>Everyone has a local copy of the history</li>
           </ul>
@@ -155,11 +156,11 @@
           </section>
           <section>
             <h3>Installation and Setup</h3>
-            <p>Setup ssh keys</p>
+            <p>Set up ssh keys</p>
             <pre><code contenteditable class ="command-line">
-             $ cd ~/.ssh
+$ cd ~/.ssh
             </code></pre>
-            <pre><code contenteditable class ="command-line">
+            <pre><code contenteditable class="command-line">
 $ ssh-keygen -t rsa -C "your_email@example.com"
 # Generating public/private rsa key pair.
 # Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
@@ -186,7 +187,7 @@ Your identification has been saved in /Users/you/.ssh/id_rsa.
           </section>
           <section>
             <h3>Installation and Setup</h3>
-            <p>Setup name and email in gitconfig</p>
+            <p>Set up name and email in gitconfig</p>
             <pre><code contenteditable class ="command-line">
 $ git config --global user.name "Your Name Here"
 # Sets the default name for git to use when you commit
@@ -203,22 +204,22 @@ $ git config --list
         <!-- First commands-->
         <section>
           <section>
-            <h3>Your first Local Repository</h3>
+            <h3>Your First Local Repository</h3>
             <p>Go to home directory</p>
             <pre><code contenteditable class ="command-line">
-  cd ~/
-  OR
-  cd Users\username
+cd ~/
+OR
+cd Users\username
             </code></pre>
             <p>Create a "working directory"</p>
             <pre><code contenteditable class ="command-line">
-  mkdir my-first-repo
-  cd my-first-repo
+mkdir my-first-repo
+cd my-first-repo
             </code></pre>
             <p>Initialize repository with Git</p>
             <pre><code contenteditable class ="command-line">
-  git init
-  git status
+git init
+git status
             </code></pre>
           </section>
           <section>
@@ -226,12 +227,12 @@ $ git config --list
             <p>Create a new hello_world.txt file in your new folder</p>
             <p>Check repo status</p>
             <pre><code contenteditable class ="command-line">
-  git status
+git status
             </code></pre>
             <p>Tell Git to track our new file</p>
             <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git status
+git add hello_world.txt
+git status
             </code></pre>
             <p>File is now tracked by Git</p>
           </section>
@@ -239,12 +240,12 @@ $ git config --list
             <h3>Changes and commits</h3>
             <p>Open hello_world.txt and add some more text</p>
             <pre><code contenteditable class ="command-line">
-  git status
+git status
             </code></pre>
             <p>Stage and commit the change</p>
             <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git commit -m "First commit. Added hello world to repository."
+git add hello_world.txt
+git commit -m "First commit. Added hello world to repository."
             </code></pre>
           </section>
         </section>
@@ -263,20 +264,20 @@ $ git config --list
           <section>
             <h3>Look at our progress</h3>
             <pre><code contenteditable class ="command-line">
-  git log
+git log
             </code></pre>
             <pre><code contenteditable class ="command-line">
-  commit [HASH HERE]
-  Author: Your name <you@your-email.com>
-  Date:   [DATE HERE]
+commit [HASH HERE]
+Author: Your name <you@your-email.com>
+Date:   [DATE HERE]
 
-      First commit. Added hello world to repository.
+First commit. Added hello world to repository.
               </code></pre>
           </section>
           <section>
             <h3>Look at our progress, visually</h3>
             <pre><code contenteditable class ="command-line">
-  gitk
+gitk
             </code></pre>
             <img src = "images/gitk.png" alt ="Image of commits for this curriculum repo"/>
           </section>
@@ -290,8 +291,8 @@ $ git config --list
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
-  change hello_world.txt
-  git checkout hello_world.txt
+change hello_world.txt
+git checkout hello_world.txt
               </code></pre>
             </div>
             <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>

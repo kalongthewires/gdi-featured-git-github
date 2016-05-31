@@ -36,6 +36,12 @@ body {
   background: #f9b8bb;
   text-shadow: none; }
 
+.reveal pre {
+  width: 100%; }
+
+.reveal pre code {
+  padding: 0 20px; }
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -55,6 +61,14 @@ body {
 
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+.fragment h1,
+.fragment h2,
+.fragment h3,
+.fragment h4,
+.fragment h5,
+.fragment h6 {
+  margin-top: 30px; }
 
 /*********************************************
  * LINKS
