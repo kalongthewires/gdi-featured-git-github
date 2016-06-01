@@ -245,7 +245,7 @@ git status
             <p>Stage and commit the change</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -m "First commit. Added hello world to repository."
+git commit -m "Initial commit. Add hello world to repository."
             </code></pre>
           </section>
         </section>
@@ -287,7 +287,6 @@ gitk
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing local changes</h4>
-            <p>If you haven't committed yet</p>
             <div class = "fragment">
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
@@ -295,7 +294,7 @@ change hello_world.txt
 git checkout hello_world.txt
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p class="fragment">Look at hello_world.txt. Your <span class="green">uncommitted</span> changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
@@ -317,7 +316,7 @@ git checkout hello_world.txt
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -am "Changing and committing some lines"
+git commit -m "Change some lines"
 git log --pretty=oneline
 git revert [HASH]
               </code></pre>
@@ -365,7 +364,7 @@ git checkout -b version2
             <p>Add new lines to hello_world.txt</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -m "Adding changes to version 2"
+git commit -m "Add changes to version 2"
             </code></pre>
           </section>
           <section>
@@ -403,14 +402,14 @@ git merge version2
             <p>Change first line in hello_world.txt in master branch</p>
             <pre><code contenteditable class ="command-line">
 git add hello_world.txt
-git commit -m "Changing first line in master"
+git commit -m "Change first line in master"
             </code></pre>
             <p>Change first line in hello_world.txt in version2 branch</p>
             <pre><code contenteditable class ="command-line">
 git checkout version2
 # open hello_world.txt and change first line
 git add hello_world.txt
-git commit -m "Changing first line in version2"
+git commit -m "Change first line in version2"
             </code></pre>
           </section>
           <section>
@@ -472,13 +471,13 @@ git pull origin master
           <section>
             <h3>GitHub</h3>
             <h4>Push to GitHub Repo</h4>
-            <p>Edit the ReadMe file
+            <p>Edit the README file
             <pre><code contenteditable class ="command-line">
 git add README
-git commit -m "Updating readme file"
+git commit -m "Update README file."
 git push origin master
             </code></pre>
-            <p class ="fragment">Go look at your github repo online</p>
+            <p class ="fragment">Go look at your Github repo online</p>
           </section>
           <section>
             <h3>GitHub</h3>
@@ -486,11 +485,11 @@ git push origin master
             <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
             <pre><code contenteditable class ="command-line">
 # Commit local changes
-git commit -m "My latest commit"
+git commit -m "Add latest changes"
 # Pull changes other people have made
 git pull origin master
 # Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fixing merging conflicts"
+git commit -m "Fix merge conflicts"
 # push local changes to GitHub
 git push origin master
             </code></pre>
