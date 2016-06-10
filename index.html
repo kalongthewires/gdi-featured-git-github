@@ -79,33 +79,32 @@
 				</section>
 				<!-- Version control-->
         <section>
-          <section>
-            <h3>What is version control?</h3>
-            <p>Version control allows you (and/or your team) to:</p>
-            <div>
-              <h4>Collaborate</h4>
-              <p>Create anything with other people, from academic papers to entire websites and applications.</p>
-            </div>
-            <div>
-              <h4>Track and revert changes</h4>
-              <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
-            </div>
-          </section>
-          <section>
-            <h3>Working without Version Control</h3>
-            <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
-            <p>The Horror!</p>
-          </section>
-          <section>
-            <h3>Working with Version Control</h3>
-            <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
-            <p>Rainbows and bunny rabbits!</h3>
-            <aside class="notes">
-          		This is a very simplified example, but what if this is a large codebase with many folders of documents. You don't want to be trying to manually piece together changes into a final version.
-          	</aside>
-          </section>
+          <h3>What is version control?</h3>
+          <p>Version control allows you (and/or your team) to:</p>
+          <div>
+            <h4>Collaborate</h4>
+            <p>Create anything with other people, from academic papers to entire websites and applications.</p>
+          </div>
+          <div>
+            <h4>Track and revert changes</h4>
+            <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
+          </div>
         </section>
 
+        <section>
+          <h3>Working without Version Control</h3>
+          <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
+          <p>The Horror!</p>
+        </section>
+
+        <section>
+          <h3>Working with Version Control</h3>
+          <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
+          <p>Rainbows and bunny rabbits!</h3>
+          <aside class="notes">
+        		This is a very simplified example, but what if this is a large codebase with many folders of documents. You don't want to be trying to manually piece together changes into a final version.
+        	</aside>
+        </section>
 
 				<section>
 					<h3>What is Git?</h3>
@@ -118,51 +117,53 @@ git status
 						<img src="images/git-gui-example.png" alt="Tower for Mac, an example of a Git GUI.">
 				</section>
 
+	      <section>
+	        <div>
+	          <h3>What is GitHub?</h3>
+	          <ul>
+	          	<li>A website (<a target="_blank" href = "http://www.github.com" alt="GitHub homepage">www.github.com</a>) for hosting your <span class="green">Git repositories</span>.</li>
+	          	<li>Allows people to download, use, and contribute to your projects, and to learn from your code (and vice versa).</li>
+	          	<li>Using GitHub is not required to use Git.</li>
+	          </ul>
+	        </div>
+	        <aside class="notes">
+	        	GitLab is another website that hosts repositories. GitHub is most commonly used, however, and will be what we learn about in this class.
+	        	Sharing and contributing to code -> Open Source!
+	        </aside>
+	      </section>
+
         <section>
+          <h3>Brief History of Version Control</h3>
+          <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
+          <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
+          <p><span class ="green">2005</span> -- Git (well, Git)</p>
+        </section>
+
+        <section>
+          <h3>Version Control Types</h3>
           <div>
-            <h3>What is GitHub?</h3>
-            <ul>
-            	<li>A website (<a target="_blank" href = "http://www.github.com" alt="GitHub homepage">www.github.com</a>) for hosting your <span class="green">Git repositories</span>.</li>
-            	<li>Allows people to download, use, and contribute to your projects, and to learn from your code (and vice versa).</li>
-            	<li>Using GitHub is not required to use Git.</li>
-            </ul>
+            <h4>Centralized Version Control</h4>
+            <p>Examples: CVS, SVN</p>
+            <p>One central server, each person checks out and merges changes to main server.</p>
+          </div>
+          <div>
+            <h4>Distributed Version Control</h4>
+            <p>Examples: Git, Mercurial</p>
+            <p>Each person has a local repository, which they can then reconcile with the main server.</p>
           </div>
           <aside class="notes">
-          	GitLab is another website that hosts repositories. GitHub is most commonly used, however, and will be what we learn about in this class.
-          	Sharing and contributing to code -> Open Source!
+          	<p>Centralized Version Control is like getting a book from the library. You checkout a file from the server that is housing it. While you have that file checked out, no one else can check it out to edit it. When you're done, you send it back to the server where your document changes are merged in.</p>
+
+          	<p>Distributed Version Control is more like downloading an ebook. Everyone can checkout a copy of a document, make changes simultaneously, and then send those changes to the server, where the changes are merged together.</p>
           </aside>
         </section>
-        <section>
-          <section>
-            <h3>Brief History of Version Control</h3>
-            <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
-            <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
-            <p><span class ="green">2005</span> -- Git (well, Git)</p>
-          </section>
-          <section>
-            <h3>Version Control Types</h3>
-            <div>
-              <h4>Centralized Version Control</h4>
-              <p>Examples: CVS, SVN</p>
-              <p>One central server, each person checks out and merges changes to main server.</p>
-            </div>
-            <div>
-              <h4>Distributed Version Control</h4>
-              <p>Examples: Git, Mercurial</p>
-              <p>Each person has a local repository, which they can then reconcile with the main server.</p>
-            </div>
-            <aside class="notes">
-            	<p>Centralized Version Control is like getting a book from the library. You checkout a file from the server that is housing it. While you have that file checked out, no one else can check it out to edit it. When you're done, you send it back to the server where your document changes are merged in.</p>
 
-            	<p>Distributed Version Control is more like downloading an ebook. Everyone can checkout a copy of a document, make changes simultaneously, and then send those changes to the server, where the changes are merged together.</p>
-            </aside>
-          </section>
-          <section>
-            <h3>Version Control Distribution</h3>
-            <img src="./images/vcs-usage-data.png" alt ="Graph displaying the use of different version control systems pre-2000 to 2015." />
-            <a href="https://www.google.com/trends/explore?hl=en-US&q=/m/05vqwg,+/m/09d6g,+/m/012ct9,+/m/08441_&cmpt=q&tz&tz&content=1#q=%2Fm%2F05vqwg%2C%20%2Fm%2F09d6g%2C%20%2Fm%2F012ct9%2C%20%2Fm%2F08441_&cmpt=q&tz=Etc%2FGMT%2B4" target="_blank">Source: Google Trends</a>
-          </section>
+        <section>
+          <h3>Version Control Distribution</h3>
+          <img src="./images/vcs-usage-data.png" alt ="Graph displaying the use of different version control systems pre-2000 to 2015." />
+          <a href="https://www.google.com/trends/explore?hl=en-US&q=/m/05vqwg,+/m/09d6g,+/m/012ct9,+/m/08441_&cmpt=q&tz&tz&content=1#q=%2Fm%2F05vqwg%2C%20%2Fm%2F09d6g%2C%20%2Fm%2F012ct9%2C%20%2Fm%2F08441_&cmpt=q&tz=Etc%2FGMT%2B4" target="_blank">Source: Google Trends</a>
         </section>
+
         <!-- Git-->
         <section>
           <h3>Why Git?</h3>
