@@ -209,55 +209,64 @@ $ git config --list
             <!-- First commands-->
             <section>
                 <h3>Create A Local Repository</h3>
-                <p class="left-align">1. Go to your home directory.</p>
+                <p>1. Go to your home directory.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ cd ~/
+OR
 $ cd Users\username
         </code></pre>
-                <p class="left-align">2. Create a "<span class="green">working directory</span>".</p>
+                <p>2. Create a "<span class="green">working directory</span>".</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ mkdir my-repo
 $ cd my-repo
         </code></pre>
-                <p class="left-align">3. Initialize your directory as a local Git repository.</p>
+                <p>3. Initialize your directory as a <span class="green">local Git repository</span>.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git init
+$ git status
         </code></pre>
             </section>
             <section>
-                <h3>Add files</h3>
-                <p>Create a new hello_world.txt file in your new folder</p>
-                <p>Check repo status</p>
+                <h3>Add Files</h3>
+                <p>1. Create a new file in your folder called "kitten.txt".</p>
+                <pre><code class="command-line ruby">
+$ touch kitten.txt
+            </code></pre>
+                <p>2. Check repo status.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git status
         </code></pre>
-                <p>Tell Git to track our new file</p>
+                <p>3. Tell Git to track our new file with the <span class="green">"git add"</span>.</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
+$ git add kitten.txt
 $ git status
         </code></pre>
-                <p>File is now tracked by Git</p>
+                <p><span class="blue">Success!</span> Your file is now tracked by Git.</p>
             </section>
             <section>
-                <h3>Changes and commits</h3>
-                <p>Open hello_world.txt and add some more text</p>
+                <h3>Changes and Commits</h3>
+                <p>1. Open kitten.txt, add some text, and save it.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git status
         </code></pre>
-                <p>Stage and commit the change</p>
+                <p>2. Stage your changes and check the status.</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
-$ git commit -m "Initial commit. Add hello world to repository."
+$ git add kitten.txt
+$ git status
         </code></pre>
+    			<p>3. Commit the changes. Include a commit message that describes the changes.</p>
+		<pre><code contenteditable class ="command-line ruby">
+$ git commit -m "Initial commit. Add kitten.txt to repository."
+		</code></pre>
             </section>
             <!-- Explanation-->
             <section>
                 <h3>What did we just do??</h3>
                 <p>How is this all different than just saving a file?</p>
                 <ul>
-                    <li>When we <span class="green">add</span> a new file, we tell Git to add the file to the repository to be tracked</li>
-                    <li>When we <span class="green">stage</span> an existigng file (also with the keyword 'add'), we are telling Git to track the current state of our file</li>
-                    <li>A <span class="green">commit</span> saves changes made to a file, not the file as a whole. The commit will have a <span class="green">'hash'</span> so we can track which changes were committed when and by whom.</li>
+                    <li>When we <span class="green">add</span> a new file, we tell Git to add the file to the repository to be tracked.</li>
+                    <li>This is also called <span class="green">staging</span> a file. A snapshot of our changes is now in the <span class="green">staging area</span>, ready to be saved.</li>
+                    <li>A <span class="green">commit</span> saves <span class="blue">changes</span> made to a file, not the file as a whole. The commit will have a unique ID so we can track which changes were committed when and by whom.</li>
                 </ul>
             </section>
             <section>
