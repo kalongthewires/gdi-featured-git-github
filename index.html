@@ -179,73 +179,71 @@ git status
           </aside>
         </section>
         <!-- Set Up Git-->
+      	<section>
+      		<h3>Create a GitHub Account</h3>
+    			<p>Sign up for an account: <a href="https://github.com/">github.com</a></p>
+    			<img src="images/create-github-account.png" alt="">
+      	</section>
         <section>
-        	<section>
-        		<h3>Create a GitHub Account</h3>
-      			<p>Sign up for an account: <a href="https://github.com/">github.com</a></p>
-      			<img src="images/create-github-account.png" alt="">
-        	</section>
-          <section>
-            <h3>Install Git</h3>
-            <div class="left-align">
-	            <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git for a Mac" target ="_blank">
-	          		Install Git - Mac
-	            </a>
-            </div>
-            <div class="left-align">
-	            <a href="https://git-for-windows.github.io/" alt="Download the Git and Git Bash for a PC" target="_blank">
-	            	Install Git - PC
-	            </a>
-            </div>
-            <img src = "images/install-git.png" alt = "Download latest version of Git"/>
-          </section>
-          <section>
-            <h3>Git Setup</h3>
-            <p class="left-align">Set up ssh keys:</p>
-            <pre><code contenteditable class ="command-line">
+          <h3>Install Git</h3>
+          <div class="left-align">
+            <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git for a Mac" target ="_blank">
+          		Install Git - Mac
+            </a>
+          </div>
+          <div class="left-align">
+            <a href="https://git-for-windows.github.io/" alt="Download the Git and Git Bash for a PC" target="_blank">
+            	Install Git - PC
+            </a>
+          </div>
+          <img src = "images/install-git.png" alt = "Download latest version of Git"/>
+        </section>
+        <section>
+          <h3>Git Setup</h3>
+          <p class="left-align">Set up ssh keys:</p>
+          <pre><code contenteditable class ="command-line">
 $ cd ~/.ssh
-            </code></pre>
-            <pre><code contenteditable class="command-line">
+          </code></pre>
+          <pre><code contenteditable class="command-line">
 $ ssh-keygen -t rsa -C "your_email@example.com"
 # Generating public/private rsa key pair.
 # Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 Enter passphrase (empty for no passphrase): [Type a passphrase]
 # Enter same passphrase again: [Type passphrase again]
-            </code></pre>
-            <aside class="notes">May need to make the .ssh directory.</aside>
-          </section>
-          <section>
-            <h3>Git Setup</h3>
-            <p>Get SSH Key</p>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <aside class="notes">May need to make the .ssh directory.</aside>
+        </section>
+        <section>
+          <h3>Git Setup</h3>
+          <p>Get SSH Key</p>
+          <pre><code contenteditable class ="command-line">
 Your identification has been saved in /Users/you/.ssh/id_rsa.
 # Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
 # The key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-            </code></pre>
-          </section>
-          <section>
-            <h3>Git Setup</h3>
-            <p>Add SSH Key to GitHub (<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-mac">Instructions</a>)</p>
-            <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
-          </section>
-          <section>
-            <h3>Set Up Git</h3>
-            <p>Set up name and email in gitconfig</p>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+        </section>
+        <section>
+          <h3>Git Setup</h3>
+          <p>Add SSH Key to GitHub (<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-mac">Instructions</a>)</p>
+          <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
+        </section>
+        <section>
+          <h3>Set Up Git</h3>
+          <p>Set up name and email in gitconfig</p>
+          <pre><code contenteditable class ="command-line">
 $ git config --global user.name "Your Name Here"
 # Sets the default name for Git to use when you commit
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 $ git config --global user.email "your_email@example.com"
 # Sets the default email for Git to use when you commit
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 $ git config --list
-            </code></pre>
-          </section>
+          </code></pre>
         </section>
         <!-- First commands-->
         <section>
