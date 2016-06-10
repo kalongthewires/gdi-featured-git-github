@@ -70,25 +70,23 @@
           </div>
         </section>
 
-        <section>
-          <h3>What we will cover today</h3>
-          <ul>
-            <li class ="fragment">What is version control and why should we care?</li>
-            <li class ="fragment">Basics of git -- the essential commands</li>
-            <li class ="fragment">"Gitting" social with GitHub</li>
-          </ul>
-        </section>
-
-        <!-- Version control-->
+				<section>
+					<h3>What is Git?</h3>
+					<ul>
+						<li>Git is a <span class="green">version control system</span>.</li>
+						<li>Not synonymous with GitHub!</li>
+					</ul>
+				</section>
+				<!-- Version control-->
         <section>
           <section>
             <h3>What is version control?</h3>
-            <p>Version control allows you (and your team) to do two powerful things</p>
-            <div class="fragment">
+            <p>Version control allows you (and/or your team) to:</p>
+            <div>
               <h4>Collaborate</h4>
               <p>Create anything with other people, from academic papers to entire websites and applications.</p>
             </div>
-            <div class="fragment">
+            <div>
               <h4>Track and revert changes</h4>
               <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
             </div>
@@ -102,7 +100,37 @@
             <h3>Working with Version Control</h3>
             <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
             <p>Rainbows and bunny rabbits!</h3>
+            <aside class="notes">
+          		This is a very simplified example, but what if this is a large codebase with many folders of documents. You don't want to be trying to manually piece together changes into a final version.
+          	</aside>
           </section>
+        </section>
+
+
+				<section>
+					<h3>What is Git?</h3>
+					<p>Using Git, means using a set of commands. For e.g., on the command line:</p>
+
+						<pre><code contenteditable class ="command-line">
+git status
+            </code></pre>
+            <p>Or in a GUI (graphical user interface):</p>
+						<img src="images/git-gui-example.png" alt="Tower for Mac, an example of a Git GUI.">
+				</section>
+
+        <section>
+          <div>
+            <h3>What is GitHub?</h3>
+            <ul>
+            	<li>A website (<a target="_blank" href = "http://www.github.com" alt="GitHub homepage">www.github.com</a>) for hosting your <span class="green">Git repositories</span>.</li>
+            	<li>Allows people to download, use, and contribute to your projects, and to learn from your code (and vice versa).</li>
+            	<li>Using GitHub is not required to use Git.</li>
+            </ul>
+          </div>
+          <aside class="notes">
+          	GitLab is another website that hosts repositories. GitHub is most commonly used, however, and will be what we learn about in this class.
+          	Sharing and contributing to code -> Open Source!
+          </aside>
         </section>
         <section>
           <section>
@@ -414,20 +442,6 @@ git merge master
             </code></pre>
             <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
 
-          </section>
-        </section>
-        <!-- GitHub-->
-        <section>
-          <section>
-            <h3><a href = "http://www.github.com" alt="GitHub homepage">GitHub</a></h3>
-            <ul>
-              <li class ="fragment">Launched in <span class ="green">2008</span></li>
-              <li class = "fragment">Leader in <span class ="green">Social Coding</span></li>
-              <li class = "fragment">GitHub is a commercial site that allows users to <span class = "green">host Git repositories</span> publicly and privately</li>
-              <li class ="fragment"><span class ="green">Open source projects</span> host or mirror their repositories on GitHub</li>
-              <li class ="fragment"><span class ="green">Post your own code</span> for others to use or contribute to</li>
-              <li class ="fragment">Use and <span class ="green">learn</span> from the code in other people's repositories</li>
-            </ul>
           </section>
         </section>
         <!-- New repository-->
