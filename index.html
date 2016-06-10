@@ -312,28 +312,28 @@ $ git checkout kitten.txt
                 <h3>Nobody's Perfect</h3>
                 <h4>Undoing staged changes</h4>
                 <div>
-                    <p>Open hello_world.txt and add some new text</p>
+                    <p>Open kitten.txt and add some new text</p>
                     <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
-$ git reset HEAD hello_world.txt
-$ git checkout hello_world.txt
+$ git add kitten.txt
+$ git reset HEAD kitten.txt
+$ git checkout kitten.txt
           </code></pre>
                 </div>
-                <p>Look at hello_world.txt. Your changes are gone.</p>
+                <p>Look at kitten.txt. Your changes are gone.</p>
             </section>
             <section>
                 <h3>Nobody's Perfect</h3>
                 <h4>Undoing staged changes</h4>
                 <div>
-                    <p>Open hello_world.txt and add some new text</p>
+                    <p>Open kitten.txt and add some new text</p>
                     <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
+$ git add kitten.txt
 $ git commit -m "Change some lines"
 $ git log --pretty=oneline
 $ git revert [HASH]
           </code></pre>
                 </div>
-                <p>Look at hello_world.txt. Your changes are gone.</p>
+                <p>Look at kitten.txt. Your changes are gone.</p>
             </section>
             <section>
                 <h3>Nobody's Perfect</h3>
@@ -371,9 +371,9 @@ $ git rm my_other_file.txt
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout -b version2
         </code></pre>
-                <p>Add new lines to hello_world.txt</p>
+                <p>Add new lines to kitten.txt</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
+$ git add kitten.txt
 $ git commit -m "Add changes to version 2"
         </code></pre>
             </section>
@@ -384,11 +384,11 @@ $ git commit -m "Add changes to version 2"
                 <pre><code contenteditable class ="command-line ruby">
 $ git branch
         </code></pre>
-                <p>Switch to master and look at hello_world.txt</p>
+                <p>Switch to master and look at kitten.txt</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout master
         </code></pre>
-                <p>Switch to version2 and look at hello_world.txt</p>
+                <p>Switch to version2 and look at kitten.txt</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout version2
         </code></pre>
@@ -407,16 +407,16 @@ $ git merge version2
             <section>
                 <h3>Merging</h3>
                 <h4>Merge conflicts</h4>
-                <p>Change first line in hello_world.txt in master branch</p>
+                <p>Change first line in kitten.txt in master branch</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git add hello_world.txt
+$ git add kitten.txt
 $ git commit -m "Change first line in master"
         </code></pre>
-                <p>Change first line in hello_world.txt in version2 branch</p>
+                <p>Change first line in kitten.txt in version2 branch</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout version2
-# open hello_world.txt and change first line
-$ git add hello_world.txt
+# open kitten.txt and change first line
+$ git add kitten.txt
 $ git commit -m "Change first line in version2"
         </code></pre>
             </section>
