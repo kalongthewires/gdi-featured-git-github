@@ -113,12 +113,12 @@
           </section>
           <section>
             <h3>Version Control Types</h3>
-            <div class="fragment">
+            <div>
               <h4>Centralized Version Control</h4>
               <p>Examples: CVS, SVN</p>
               <p>One central server, each client (person) checks out and merges changes to main server.</p>
             </div>
-            <div class="fragment">
+            <div>
               <h4>Distributed Version Control</h4>
               <p>Examples: Git, Mercurial</p>
               <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
@@ -287,7 +287,7 @@ gitk
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing local changes</h4>
-            <div class = "fragment">
+            <div>
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 change hello_world.txt
@@ -299,7 +299,7 @@ git checkout hello_world.txt
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing staged changes</h4>
-            <div class = "fragment">
+            <div>
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
@@ -307,12 +307,12 @@ git reset HEAD hello_world.txt
 git checkout hello_world.txt
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p>Look at hello_world.txt. Your changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
             <h4>Undoing staged changes</h4>
-            <div class = "fragment">
+            <div>
               <p>Open hello_world.txt and add some new text</p>
               <pre><code contenteditable class ="command-line">
 git add hello_world.txt
@@ -321,7 +321,7 @@ git log --pretty=oneline
 git revert [HASH]
               </code></pre>
             </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+            <p>Look at hello_world.txt. Your changes are gone.</p>
           </section>
           <section>
             <h3>Nobody's Perfect</h3>
@@ -419,7 +419,7 @@ git commit -m "Change first line in version2"
             <pre><code contenteditable class ="command-line">
 git merge master
             </code></pre>
-            <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+            <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
 
           </section>
         </section>
@@ -477,7 +477,7 @@ git add README
 git commit -m "Update README file."
 git push origin master
             </code></pre>
-            <p class ="fragment">Go look at your Github repo online</p>
+            <p>Go look at your GitHub repo online</p>
           </section>
           <section>
             <h3>GitHub</h3>
@@ -532,9 +532,9 @@ git fetch upstream
           <section>
             <h3>Pull Requests</h3>
             <ul>
-              <li class = "fragment">After you fork and clone a repository all pushed changes will go to your fork</li>
-              <li class = "fragment">These changes will not affect the original repository</li>
-              <li class = "fragment">If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
+              <li>After you fork and clone a repository all pushed changes will go to your fork</li>
+              <li>These changes will not affect the original repository</li>
+              <li>If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
             </ul>
           </section>
           <section>
