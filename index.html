@@ -85,7 +85,7 @@
             <section class="present" style="top: 100px; display: block;">
                 <h3>You already manage versions of your work!</h3>
                 <p> Do you have files somewhere that look like this?</p>
-                <pre><code contenteditable class ="command-line">
+                <pre><code contenteditable class ="command-line ruby">
 Resume-September2013.docx
 Resume-for-Duke-job.docx
 ResumeOLD.docx
@@ -167,15 +167,15 @@ ResumeREALLYREALLYNEW.docx
             <section>
                 <h3>Set Up Git</h3>
                 <p class="left-align">Set your name and email:</p>
-                <pre><code contenteditable class ="command-line">
+                <pre><code contenteditable class ="command-line ruby">
 $ git config --global user.name "YOUR_NAME_HERE"
           </code></pre>
-                <pre><code contenteditable class ="command-line">
+                <pre><code contenteditable class ="command-line ruby">
 $ git config --global user.email "YOUR_EMAIL_HERE"
           </code></pre>
                 <br />
                 <p class="left-align">View your Git config:</p>
-                <pre><code contenteditable class ="command-line">
+                <pre><code contenteditable class ="command-line ruby">
 $ git config --list
           </code></pre>
             </section>
@@ -190,46 +190,44 @@ $ git config --list
             <section>
                 <h3>Your First Local Repository</h3>
                 <p>Go to home directory</p>
-                <pre><code contenteditable class ="command-line">
-cd ~/
-OR
-cd Users\username
+                <pre><code contenteditable class ="command-line ruby">
+$ cd ~/
+$ cd Users\username
         </code></pre>
                 <p>Create a "working directory"</p>
-                <pre><code contenteditable class ="command-line">
-mkdir my-first-repo
-cd my-first-repo
+                <pre><code contenteditable class ="command-line ruby">
+$ mkdir my-repo
+$ cd my-repo
         </code></pre>
                 <p>Initialize repository with Git</p>
-                <pre><code contenteditable class ="command-line">
-git init
-git status
+                <pre><code contenteditable class ="command-line ruby">
+$ git init
         </code></pre>
             </section>
             <section>
                 <h3>Add files</h3>
                 <p>Create a new hello_world.txt file in your new folder</p>
                 <p>Check repo status</p>
-                <pre><code contenteditable class ="command-line">
-git status
+                <pre><code contenteditable class ="command-line ruby">
+$ git status
         </code></pre>
                 <p>Tell Git to track our new file</p>
-                <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git status
+                <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git status
         </code></pre>
                 <p>File is now tracked by Git</p>
             </section>
             <section>
                 <h3>Changes and commits</h3>
                 <p>Open hello_world.txt and add some more text</p>
-                <pre><code contenteditable class ="command-line">
-git status
+                <pre><code contenteditable class ="command-line ruby">
+$ git status
         </code></pre>
                 <p>Stage and commit the change</p>
-                <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Initial commit. Add hello world to repository."
+                <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git commit -m "Initial commit. Add hello world to repository."
         </code></pre>
             </section>
             <!-- Explanation-->
@@ -244,10 +242,10 @@ git commit -m "Initial commit. Add hello world to repository."
             </section>
             <section>
                 <h3>Look at our progress</h3>
-                <pre><code contenteditable class ="command-line">
-git log
+                <pre><code contenteditable class ="command-line ruby">
+$ git log
         </code></pre>
-                <pre><code contenteditable class ="command-line">
+        <pre><code contenteditable class ="command-line ruby">
 commit [HASH HERE]
 Author: Your name <you@your-email.com>
 Date:   [DATE HERE]
@@ -261,9 +259,8 @@ First commit. Added hello world to repository.
                 <h4>Undoing local changes</h4>
                 <div>
                     <p>Open hello_world.txt and add some new text</p>
-                    <pre><code contenteditable class ="command-line">
-change hello_world.txt
-git checkout hello_world.txt
+                    <pre><code contenteditable class ="command-line ruby">
+$ git checkout hello_world.txt
           </code></pre>
                 </div>
                 <p>Look at hello_world.txt. Your <span class="green">uncommitted</span> changes are gone.</p>
@@ -273,10 +270,10 @@ git checkout hello_world.txt
                 <h4>Undoing staged changes</h4>
                 <div>
                     <p>Open hello_world.txt and add some new text</p>
-                    <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git reset HEAD hello_world.txt
-git checkout hello_world.txt
+                    <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git reset HEAD hello_world.txt
+$ git checkout hello_world.txt
           </code></pre>
                 </div>
                 <p>Look at hello_world.txt. Your changes are gone.</p>
@@ -286,11 +283,11 @@ git checkout hello_world.txt
                 <h4>Undoing staged changes</h4>
                 <div>
                     <p>Open hello_world.txt and add some new text</p>
-                    <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Change some lines"
-git log --pretty=oneline
-git revert [HASH]
+                    <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git commit -m "Change some lines"
+$ git log --pretty=oneline
+$ git revert [HASH]
           </code></pre>
                 </div>
                 <p>Look at hello_world.txt. Your changes are gone.</p>
@@ -299,21 +296,21 @@ git revert [HASH]
                 <h3>Nobody's Perfect</h3>
                 <h4>Remove a file from staging</h4>
                 <p>Create new file my_new_file.txt</p>
-                <pre><code contenteditable class ="command-line">
-git add my_new_file.txt
-git reset my_new_file.txt
+                <pre><code contenteditable class ="command-line ruby">
+$ git add my_new_file.txt
+$ git reset my_new_file.txt
           </code></pre>
             </section>
             <section>
                 <h3>Nobody's Perfect</h3>
                 <h4>Delete a file</h4>
                 <p>Create new file my_other_file.txt</p>
-                <pre><code contenteditable class ="command-line">
-git add my_other_file.txt
+                <pre><code contenteditable class ="command-line ruby">
+$ git add my_other_file.txt
         </code></pre>
                 <p>Manually delete your file</p>
-                <pre><code contenteditable class ="command-line">
-git rm my_other_file.txt
+                <pre><code contenteditable class ="command-line ruby">
+$ git rm my_other_file.txt
         </code></pre>
             </section>
             <!-- Branches-->
@@ -328,29 +325,29 @@ git rm my_other_file.txt
             <section>
                 <h3>Branching</h3>
                 <p>Create a new branch called version2</p>
-                <pre><code contenteditable class ="command-line">
-git checkout -b version2
+                <pre><code contenteditable class ="command-line ruby">
+$ git checkout -b version2
         </code></pre>
                 <p>Add new lines to hello_world.txt</p>
-                <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Add changes to version 2"
+                <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git commit -m "Add changes to version 2"
         </code></pre>
             </section>
             <section>
                 <h3>Branching</h3>
                 <h4>Switching branches</h4>
                 <p>See all branches. Branch with * is active</p>
-                <pre><code contenteditable class ="command-line">
-git branch
+                <pre><code contenteditable class ="command-line ruby">
+$ git branch
         </code></pre>
                 <p>Switch to master and look at hello_world.txt</p>
-                <pre><code contenteditable class ="command-line">
-git checkout master
+                <pre><code contenteditable class ="command-line ruby">
+$ git checkout master
         </code></pre>
                 <p>Switch to version2 and look at hello_world.txt</p>
-                <pre><code contenteditable class ="command-line">
-git checkout version2
+                <pre><code contenteditable class ="command-line ruby">
+$ git checkout version2
         </code></pre>
             </section>
             <!-- Merging-->
@@ -358,9 +355,9 @@ git checkout version2
                 <h3>Merging</h3>
                 <h4>Merge to get changes from one branch into another*</h4>
                 <p>Switch to master and merge changes</p>
-                <pre><code contenteditable class ="command-line">
-git checkout master
-git merge version2
+                <pre><code contenteditable class ="command-line ruby">
+$ git checkout master
+$ git merge version2
         </code></pre>
                 <p>*rebase is another option, but will not be covered in this workshop</p>
             </section>
@@ -368,24 +365,24 @@ git merge version2
                 <h3>Merging</h3>
                 <h4>Merge conflicts</h4>
                 <p>Change first line in hello_world.txt in master branch</p>
-                <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Change first line in master"
+                <pre><code contenteditable class ="command-line ruby">
+$ git add hello_world.txt
+$ git commit -m "Change first line in master"
         </code></pre>
                 <p>Change first line in hello_world.txt in version2 branch</p>
-                <pre><code contenteditable class ="command-line">
-git checkout version2
+                <pre><code contenteditable class ="command-line ruby">
+$ git checkout version2
 # open hello_world.txt and change first line
-git add hello_world.txt
-git commit -m "Change first line in version2"
+$ git add hello_world.txt
+$ git commit -m "Change first line in version2"
         </code></pre>
             </section>
             <section>
                 <h3>Merging</h3>
                 <h4>Merge conflicts, cont.</h4>
                 <p>Merge from master into version2</p>
-                <pre><code contenteditable class ="command-line">
-git merge master
+                <pre><code contenteditable class ="command-line ruby">
+$ git merge master
         </code></pre>
                 <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
             </section>
@@ -429,23 +426,23 @@ git merge master
             <section>
                 <h3>GitHub</h3>
                 <h4>Get Local Repository of GitHub Repo</h4>
-                <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
+                <pre><code contenteditable class ="command-line ruby">
+$ cd ../ # Back in root directory
+$ mkdir hello-github
+$ cd hello-github
+$ git init
+$ git remote add origin git@github.com:username/NAME-OF-REPO
+$ git pull origin master
         </code></pre>
             </section>
             <section>
                 <h3>GitHub</h3>
                 <h4>Push to GitHub Repo</h4>
                 <p>Edit the README file
-                    <pre><code contenteditable class ="command-line">
-git add README
-git commit -m "Update README file."
-git push origin master
+                    <pre><code contenteditable class ="command-line ruby">
+$ git add README
+$ git commit -m "Update README file."
+$ git push origin master
         </code></pre>
                     <p>Go look at your GitHub repo online</p>
             </section>
@@ -453,15 +450,15 @@ git push origin master
                 <h3>GitHub</h3>
                 <h4>Pulling from remote repository</h4>
                 <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
-                <pre><code contenteditable class ="command-line">
+                <pre><code contenteditable class ="command-line ruby">
 # Commit local changes
-git commit -m "Add latest changes"
+$ git commit -m "Add latest changes"
 # Pull changes other people have made
-git pull origin master
+$ git pull origin master
 # Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fix merge conflicts"
+$ git commit -m "Fix merge conflicts"
 # push local changes to GitHub
-git push origin master
+$ git push origin master
         </code></pre>
             </section>
             <!-- Fork a repository-->
@@ -480,17 +477,17 @@ git push origin master
                 <h3>Forking</h3>
                 <h4>Cloning</h4>
                 <p>Clone to get a local repository of your fork
-                    <pre><code contenteditable class ="command-line">
-cd ../
+                    <pre><code contenteditable class ="command-line ruby">
+$ cd ../
 
-git clone https://github.com/username/FORKED-REPO-NAME.git
+$ git clone https://github.com/username/FORKED-REPO-NAME.git
 
-cd FORKED-REPO-NAME
+$ cd FORKED-REPO-NAME
 
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
 # Assigns the original repository to a remote called "upstream"
 
-git fetch upstream
+$ git fetch upstream
 # Pulls in changes not present in your local repository, without modifying your files
         </code></pre>
             </section>
