@@ -366,39 +366,50 @@ $ git log --oneline
             </section>
             <!-- Branches-->
             <section>
+            	<h3>Branching</h3>
+            	<img src="images/branches.jpg" alt="Identical birds sitting next to each other on branches.">
+            	<p>A <span class="green">branch</span> is essentially another copy of your repo that will allow you to isolate changes and leave the original copy untouched. You can later choose to combine these changes in whole or part with the "<span class="green">master</span>" copy, or not.</p>
+            </section>
+            <section>
                 <h3>Branching</h3>
                 <ul>
-                    <li>Develop different code on the same base</li>
-                    <li>Conduct exploratory work without affecting the work on master branch</li>
-                    <li>Incorporate changes to your master branch only when you are ready</li>
+                    <li>Develop different code on the same base.</li>
+                    <li>Conduct experimental work without affecting the work on master branch.</li>
+                    <li>Incorporate changes into your master branch only if and when you are ready...or discard them easily.</li>
                 </ul>
             </section>
             <section>
                 <h3>Branching</h3>
-                <p>Create a new branch called version2</p>
+                <p>Create and switch over to a new branch called "feature".</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git checkout -b version2
+$ git checkout -b feature
         </code></pre>
-                <p>Add new lines to kitten.txt</p>
+                <p>Add new lines to kitten.txt.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git add kitten.txt
-$ git commit -m "Add changes to version 2"
+$ git commit -m "Add changes to kitten.txt on feature branch."
+        </code></pre>
+            </section>
+            <section>
+                <h3>Branching</h3>
+                <h4>Viewing branches</h4>
+                <p>View all your local branches. Your active branch, the one you're "on," is marked with an *.</p>
+                <pre><code contenteditable class ="command-line ruby">
+$ git branch
         </code></pre>
             </section>
             <section>
                 <h3>Branching</h3>
                 <h4>Switching branches</h4>
-                <p>See all branches. Branch with * is active</p>
-                <pre><code contenteditable class ="command-line ruby">
-$ git branch
-        </code></pre>
-                <p>Switch to master and look at kitten.txt</p>
+				<p>Switch to master branch and look at the commit history.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout master
+$ git log --oneline
         </code></pre>
-                <p>Switch to version2 and look at kitten.txt</p>
+                <p>Switch to feature branch and look at the commit history.</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git checkout version2
+$ git checkout feature
+$ git log --oneline
         </code></pre>
             </section>
             <!-- Merging-->
@@ -408,7 +419,7 @@ $ git checkout version2
                 <p>Switch to master and merge changes</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout master
-$ git merge version2
+$ git merge feature
         </code></pre>
                 <p>*rebase is another option, but will not be covered in this workshop</p>
             </section>
@@ -420,18 +431,18 @@ $ git merge version2
 $ git add kitten.txt
 $ git commit -m "Change first line in master"
         </code></pre>
-                <p>Change first line in kitten.txt in version2 branch</p>
+                <p>Change first line in kitten.txt in feature branch</p>
                 <pre><code contenteditable class ="command-line ruby">
-$ git checkout version2
+$ git checkout feature
 # open kitten.txt and change first line
 $ git add kitten.txt
-$ git commit -m "Change first line in version2"
+$ git commit -m "Change first line in feature"
         </code></pre>
             </section>
             <section>
                 <h3>Merging</h3>
                 <h4>Merge conflicts, cont.</h4>
-                <p>Merge from master into version2</p>
+                <p>Merge from master into feature</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git merge master
         </code></pre>
