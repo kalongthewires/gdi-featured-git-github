@@ -487,64 +487,31 @@ Changing the first line on master.
             </section>
             <!-- Set Up Git-->
             <section>
-                <h3>Create a GitHub Account</h3>
+                <h3>Create A GitHub Account</h3>
                 <p>Sign up for an account: <a href="https://github.com/">github.com</a></p>
                 <img src="images/create-github-account.png" alt="">
             </section>
             <section>
-                <h3>GitHub</h3>
-                <h4>Create your first repository</h4>
-                <img src="images/bootcamp_2_newrepo.jpg" alt="How to create a new repository. Image from https://help.github.com/articles/create-a-repo" />
+                <h3>Create A Remote Repository</h3>
+                <p>You will need to be logged into your GitHub account to do this.</p>
+                <img src="images/repo-create.png" alt="image from GitHub help pages" />
             </section>
             <section>
-                <h3>GitHub</h3>
-                <h4>Create your first repository</h4>
+                <h3>Create A Remote Repository</h3>
                 <img src="images/bootcamp_2_repoinfo.png" alt="How to create a new repository. Image from https://help.github.com/articles/create-a-repo" />
             </section>
             <section>
-                <h3>GitHub</h3>
-                <h4>ReadME</h4>
-                <blockquote>
-                    While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project. You might want to include contact information - if your project becomes popular people will want to help you out.
-                </blockquote>
-            </section>
-            <section>
-                <h3>GitHub</h3>
-                <h4>Get Local Repository of GitHub Repo</h4>
-                <pre><code contenteditable class ="command-line ruby">
-$ cd ../ # Back in root directory
-$ mkdir hello-github
-$ cd hello-github
-$ git init
-$ git remote add origin git@github.com:username/NAME-OF-REPO
-$ git pull origin master
-        </code></pre>
-            </section>
-            <section>
-                <h3>GitHub</h3>
-                <h4>Push to GitHub Repo</h4>
-                <p>Edit the README file
-                    <pre><code contenteditable class ="command-line ruby">
-$ git add README
-$ git commit -m "Update README file."
-$ git push origin master
-        </code></pre>
-                    <p>Go look at your GitHub repo online</p>
-            </section>
-            <section>
-                <h3>GitHub</h3>
-                <h4>Pulling from remote repository</h4>
-                <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
-                <pre><code contenteditable class ="command-line ruby">
-# Commit local changes
-$ git commit -m "Add latest changes"
-# Pull changes other people have made
-$ git pull origin master
-# Fix any conflicts (see merge conflicts above) and commit
-$ git commit -m "Fix merge conflicts"
-# push local changes to GitHub
-$ git push origin master
-        </code></pre>
+                <h3>Set Up A Remote</h3>
+                <p>Set up your remote repository to sync with your local repository.</p>
+                <p style="margin-top: 30px;">After you click the big green button to create your repo, follow GitHub's instructions for next steps.</p>
+                <pre><code class ="command-line">
+$ git remote add origin https://github.com/YOUR-GITHUB-USERNAME/REPO.git
+$ git push -u origin master
+
+# With the -u option, you are setting a default.
+# You only need to use this flag the first time.
+            </code></pre>
+                <p>Now check out your GitHub repo online!</p>
             </section>
             <!-- Fork a repository-->
             <section>
