@@ -513,35 +513,85 @@ $ git push -u origin master
             </code></pre>
                 <p>Now check out your GitHub repo online!</p>
             </section>
-            <!-- Fork a repository-->
             <section>
-                <h3>Forking</h3>
+                <h3>What can I do with a GitHub account?</h3>
                 <ul>
-                    <li>There are <span class="green">MILLIONS</span> of public repositories on GitHub</li>
-                    <li>If you want to <span class="green">use</span> or <span class="green">contribute</span> to a repository, you can fork it.</li>
+                    <li><a href="https://help.github.com/articles/fork-a-repo/">FORK</a> a repo: Find some code you want to use and grab a copy of it. </li>
+                    <li> (Then you'll also need to <a href="http://git-scm.com/docs/git-clone">CLONE</a> the repo &mdash; that is, make your own local copy of it.)</li>
+                    <li> <a href="https://help.github.com/articles/pushing-to-a-remote/">PUSH</a> to a remote repo you own: post some code you want others to see.</li>
+                    <li>Submit a <a href="https://help.github.com/articles/creating-a-pull-request/">PULL REQUEST</a> to the owner of a repo you'd like to contribute to. </li>
                 </ul>
             </section>
             <section>
                 <h3>Forking</h3>
-                <img src="images/bootcamp_3_fork.jpg" alt="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo" />
+                <p>Think</p> <img src="images/fork-in-the-road.jpg" style="border: 0;" />
+                <p>not</p>
+                <img src="images/fork.jpg" style="height:200px; border: 0;" />
             </section>
             <section>
-                <h3>Forking</h3>
-                <h4>Cloning</h4>
-                <p>Clone to get a local repository of your fork
-                    <pre><code contenteditable class ="command-line ruby">
+                <h3><a href="https://help.github.com/articles/fork-a-repo/" target="_blank">Forking</a></h3>
+                <p>If you want to <span class="green">use</span> or <span class="green">contribute</span> to a repository, you can fork it. A fork is just a copy of a repository, saved to GitHub.</p>
+                <a href="https://github.com/amygori/tiny-repo" target="_blank"> Let's practice forking! </a>
+                <img src="images/fork_button.jpg" alt="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo/" />
+            </section>
+            <section>
+                <h3>Cloning</h3>
+                <p>To get a local copy of the fork you just made, use the <span class="green">git clone</span> command.</p>
+                <pre><code class ="command-line">
+# Change out of your my-repo directory.
 $ cd ../
 
-$ git clone https://github.com/username/FORKED-REPO-NAME.git
+# Create a copy of the tiny-repo project in your home directory.
+$ git clone https://github.com/your-github-username/tiny-repo.git
 
-$ cd FORKED-REPO-NAME
-
-$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# Assigns the original repository to a remote called "upstream"
-
-$ git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
-        </code></pre>
+$ cd tiny-repo
+            </code></pre>
+            </section>
+            <section>
+                <h3>Repository Copies</h3>
+                <div>
+                    There are now THREE copies of this repo that you have access to.
+                </div>
+                <img src="images/three_kittens.jpg">
+                <br>
+                <div>
+                    the original (on Github) => <span class="green">upstream</span>
+                </div>
+                <div>
+                    your fork (on GitHub) => <span class="green">origin</span>
+                </div>
+                <div>
+                    your clone => <span class="green">your local repo</span>, just like you're used to
+                </div>
+            </section>
+            <section>
+                <h3>Establishing An Upstream Connection</h3>
+                <p>To sync your fork with the <span class="green">original repo</span>, you need to add another remote named <span class="green">upstream</span></p>
+                <pre style="width: 100%;"><code class="command-line">
+$ git remote -v
+$ git remote add upstream https://github.com/amygori/tiny-repo.git
+$ git remote -v
+          </code></pre>
+            </section>
+            <section>
+                <h3>Shared Repos</h3>
+                <p>If team members are contributing to a single repo, each member of the team will want to make sure that she has everyone else's changes before pushing her own changes to the GitHub repo.</p>
+                <h4 class="green">Always pull before you push!</h4>
+            </section>
+            <section>
+                <h3>Pulling</h3> Commit local changes first
+                <pre><code class ="command-line">
+$ git commit -m "My latest commit."
+              </code></pre>Get changes that have been pushed to the remote repo:
+                <pre><code class ="command-line">
+$ git pull origin master
+              </code></pre> Git may prompt you to fix any conflicts, then commit:
+                <pre><code class ="command-line">
+$ git commit -m "Fix merging conflicts."
+              </code></pre> Now you are ready to push local changes to GitHub.
+                <pre><code class ="command-line">
+$ git push origin master
+              </code></pre>
             </section>
             <!-- Pull requests-->
             <section>
