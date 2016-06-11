@@ -676,12 +676,6 @@ $ git push origin master
                 return !!document.querySelector('[data-markdown]');
             }
         }, {
-            src: 'reveal/plugin/highlight/highlight.js',
-            async: true,
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
             src: 'reveal/plugin/zoom-js/zoom.js',
             async: true,
             condition: function() {
