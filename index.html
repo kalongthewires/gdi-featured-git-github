@@ -180,31 +180,32 @@ $ git config --list
           </code></pre>
             </section>
             <section>
-            	<h3>Git Vocabulary</h3>
-            	<ul>
-					<li> A <span class="green">repository</span> is essentially your project's folder. It includes all your project's files and its history.</li>
-					<li> A <span class="green">commit</span> is an object that holds information about a particular change to your project's files. </li>
-             	</ul>
+                <h3>Git Vocabulary</h3>
+                <ul>
+                    <li>A <span class="green">repository</span> is essentially your project's folder. It includes all your project's files and its history.</li>
+                    <li>A <span class="green">commit</span> is an object that holds information about a particular change to your project's files.</li>
+                    <li>A <span class="green">hash</span> is a unique ID associated with an individual commit.</li>
+                </ul>
             </section>
             <section>
-            	<h3>Git Commands</h3>
-            	<ul>
-            		<li>init</li>
-            		<li>clone</li>
-            		<li>add</li>
-            		<li>commit</li>
-            		<li>status</li>
-            		<li>log</li>
-            		<li>branch</li>
-            		<li>checkout</li>
-            		<li>fetch</li>
-            		<li>merge</li>
-            		<li>pull</li>
-            		<li>push</li>
-            	</ul>
-            	<aside class="notes">
-            		Now that we have Git installed, we have access to a set of Git commands that we can now execute on the command line. Let's start putting some of these to use.
-            	</aside>
+                <h3>Git Commands</h3>
+                <ul>
+                    <li>init</li>
+                    <li>clone</li>
+                    <li>add</li>
+                    <li>commit</li>
+                    <li>status</li>
+                    <li>log</li>
+                    <li>branch</li>
+                    <li>checkout</li>
+                    <li>fetch</li>
+                    <li>merge</li>
+                    <li>pull</li>
+                    <li>push</li>
+                </ul>
+                <aside class="notes">
+                    Now that we have Git installed, we have access to a set of Git commands that we can now execute on the command line. Let's start putting some of these to use.
+                </aside>
             </section>
             <!-- First commands-->
             <section>
@@ -254,8 +255,8 @@ $ git status
 $ git add kitten.txt
 $ git status
         </code></pre>
-    			<p>3. Commit the changes. Include a commit message that describes the changes.</p>
-		<pre><code contenteditable class ="command-line ruby">
+                <p>3. Commit the changes. Include a commit message that describes the changes.</p>
+                <pre><code contenteditable class ="command-line ruby">
 $ git commit -m "Initial commit. Add kitten.txt to repository."
 		</code></pre>
             </section>
@@ -266,7 +267,7 @@ $ git commit -m "Initial commit. Add kitten.txt to repository."
                 <ul>
                     <li>When we <span class="green">add</span> a new file, we tell Git to add the file to the repository to be tracked.</li>
                     <li>This is also called <span class="green">staging</span> a file. A snapshot of our changes is now in the <span class="green">staging area</span>, ready to be saved.</li>
-                    <li>A <span class="green">commit</span> saves <span class="blue">changes</span> made to a file, not the file as a whole. The commit will have a unique ID so we can track which changes were committed when and by whom.</li>
+                    <li>A <span class="green">commit</span> saves <span class="blue">changes</span> made to a file, not the file as a whole. The commit will have a <span class="green">hash</span> so we can track which changes were committed when and by whom.</li>
                 </ul>
             </section>
             <section>
@@ -274,7 +275,7 @@ $ git commit -m "Initial commit. Add kitten.txt to repository."
                 <pre><code contenteditable class ="command-line ruby">
 $ git log
         </code></pre>
-		<pre><code class="command-line ruby">
+                <pre><code class="command-line ruby">
 commit 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b
 Author: Your name &lt;you@your-email.com&gt;
 Date:   Thu Feb 05 16:01:22 2016 -0700
@@ -283,19 +284,19 @@ Initial commit. Add kitten.txt to repository.
       	</code></pre>
             </section>
             <section>
-				<h3>Now try...</h3>
-				<ul>
-					<li>Make changes to kitten.txt and make some more commits.</li>
-					<li>Add another file (or image!) to your project and commit that.</li>
-					<li>Change more than one file at a time, and practice making commits where you stage only one file, or both files together.</li>
-				</ul>
-				<p style="margin-top: 30px;"><span class="pink">**</span> Don't forget to run <span class="green">git status</span> regularly so that you can see what is happening after each step! <span class="pink">**</span></p>
+                <h3>Now try...</h3>
+                <ul>
+                    <li>Make changes to kitten.txt and make some more commits.</li>
+                    <li>Add another file (or image!) to your project and commit that.</li>
+                    <li>Change more than one file at a time, and practice making commits where you stage only one file, or both files together.</li>
+                </ul>
+                <p style="margin-top: 30px;"><span class="pink">**</span> Don't forget to run <span class="green">git status</span> regularly so that you can see what is happening after each step! <span class="pink">**</span></p>
             </section>
             <!-- Undoing changes -->
             <section>
-            	<h3>Nobody's Perfect</h3>
-            	<iframe src="//giphy.com/embed/lj11uKKMhr4Os?html5=true" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            	<p><small><a href="https://giphy.com/gifs/fail-robot-machine-lj11uKKMhr4Os">Source: Giphy</a> (also, <a href="https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ">Simone Giertz!</a>)</small></p>
+                <h3>Nobody's Perfect</h3>
+                <iframe src="//giphy.com/embed/lj11uKKMhr4Os?html5=true" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p><small><a href="https://giphy.com/gifs/fail-robot-machine-lj11uKKMhr4Os">Source: Giphy</a> (also, <a href="https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ">Simone Giertz!</a>)</small></p>
             </section>
             <section>
                 <h3>Undoing Local Changes</h3>
@@ -309,52 +310,59 @@ $ git checkout kitten.txt
                 <p>Look at kitten.txt. Your <span class="green">uncommitted</span> changes are gone.</p>
             </section>
             <section>
-                <h3>Nobody's Perfect</h3>
-                <h4>Undoing staged changes</h4>
+                <h3>Un-staging a File</h3>
+                <ol>
+                    <li>In your text editor, create a new file, and name it "possum.txt"</li>
+                    <li>Switch back to the command line:</li>
+                </ol>
+                <pre><code class ="command-line">
+$ git add possum.txt
+$ git status
+$ git reset possum.txt
+$ git status
+              </code></pre>
+                <p class- "fragment">The file is removed from staging, but your working copy is unchanged.</p>
+            </section>
+            <section>
+                <h3>Undoing Staged Changes</h3>
                 <div>
-                    <p>Open kitten.txt and add some new text</p>
-                    <pre><code contenteditable class ="command-line ruby">
+                    <p>Open kitten.txt in your editor and add some new text.</p>
+                    <pre><code class ="command-line">
 $ git add kitten.txt
 $ git reset HEAD kitten.txt
-$ git checkout kitten.txt
-          </code></pre>
+$ git status # the file has been unstaged.
+$ git checkout kitten.txt #resets the working copy to its state at the last commit
+              </code></pre>
                 </div>
-                <p>Look at kitten.txt. Your changes are gone.</p>
+                <p>Now look at kitten.txt in your editor again: your changes are gone, and the file is removed from staging. </p>
+                <p><span class="pink">**</span> <span class="green">HEAD</span> refers to the most recent commit on the current branch.</p>
             </section>
             <section>
-                <h3>Nobody's Perfect</h3>
-                <h4>Undoing staged changes</h4>
+                <h3>Undoing Committed Changes</h3>
+                <p>Git lets you go back to any previous commit.</p>
                 <div>
-                    <p>Open kitten.txt and add some new text</p>
-                    <pre><code contenteditable class ="command-line ruby">
+                    <p style="margin-top: 30px;">Open kitten.txt and add some new text. Then commit your changes:</p>
+                    <pre><code class ="command-line">
 $ git add kitten.txt
-$ git commit -m "Change some lines"
-$ git log --pretty=oneline
-$ git revert [HASH]
-          </code></pre>
+$ git status
+$ git commit -m "Make a change I will soon regret making"
+$ git log --oneline
+  # you should see (at least) two commits here at this point
+  # copy the short form of the hash id
+              </code></pre>
                 </div>
-                <p>Look at kitten.txt. Your changes are gone.</p>
             </section>
             <section>
-                <h3>Nobody's Perfect</h3>
-                <h4>Remove a file from staging</h4>
-                <p>Create new file my_new_file.txt</p>
-                <pre><code contenteditable class ="command-line ruby">
-$ git add my_new_file.txt
-$ git reset my_new_file.txt
-          </code></pre>
+                <h3>Undoing Committed Changes</h3>
+                <p style="margin-top: 40px;">Use <span class="green">git revert</span>:</p>
+                <pre><code class ="command-line">
+$ git revert 53d23c4
+  # Your default editor will open here
+  # you can just save it and close it as is.
+$ git log --oneline
+            </code></pre>
+                <p>Notice that the original, regrettable commit is still there, but now you also have <span class="green">another commit that undoes the changes</span> introduced by the original one.</p>
             </section>
-            <section>
-                <h3>Nobody's Perfect</h3>
-                <h4>Delete a file</h4>
-                <p>Create new file my_other_file.txt</p>
-                <pre><code contenteditable class ="command-line ruby">
-$ git add my_other_file.txt
-        </code></pre>
-                <p>Manually delete your file</p>
-                <pre><code contenteditable class ="command-line ruby">
-$ git rm my_other_file.txt
-        </code></pre>
             </section>
             <!-- Branches-->
             <section>
