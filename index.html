@@ -579,16 +579,22 @@ $ git remote -v
                 <h4 class="green">Always pull before you push!</h4>
             </section>
             <section>
-                <h3>Pulling</h3> Commit local changes first
+                <h3>Pulling</h3>
+                Commit local changes first
                 <pre><code class ="command-line">
 $ git commit -m "My latest commit."
               </code></pre>Get changes that have been pushed to the remote repo:
                 <pre><code class ="command-line">
 $ git pull origin master
-              </code></pre> Git may prompt you to fix any conflicts, then commit:
-                <pre><code class ="command-line">
-$ git commit -m "Fix merging conflicts."
-              </code></pre> Now you are ready to push local changes to GitHub.
+              </code></pre>
+            </section>
+            <section>
+            	<h3>Pulling</h3>
+            	 Git may prompt you to fix any conflicts, then commit:
+            	<pre><code class ="command-line">
+$ git commit -m "Fix merge conflicts."
+              </code></pre>
+              Now you are ready to push local changes to GitHub.
                 <pre><code class ="command-line">
 $ git push origin master
               </code></pre>
