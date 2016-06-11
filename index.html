@@ -366,9 +366,9 @@ $ git log --oneline
             </section>
             <!-- Branches-->
             <section>
-            	<h3>Branching</h3>
-            	<img src="images/branches.jpg" alt="Identical birds sitting next to each other on branches.">
-            	<p>A <span class="green">branch</span> is essentially another copy of your repo that will allow you to isolate changes and leave the original copy untouched. You can later choose to combine these changes in whole or part with the "<span class="green">master</span>" copy, or not.</p>
+                <h3>Branching</h3>
+                <img src="images/branches.jpg" alt="Identical birds sitting next to each other on branches.">
+                <p>A <span class="green">branch</span> is essentially another copy of your repo that will allow you to isolate changes and leave the original copy untouched. You can later choose to combine these changes in whole or part with the "<span class="green">master</span>" copy, or not.</p>
             </section>
             <section>
                 <h3>Branching</h3>
@@ -401,7 +401,7 @@ $ git branch
             <section>
                 <h3>Branching</h3>
                 <h4>Switching branches</h4>
-				<p>Switch to master branch and look at the commit history.</p>
+                <p>Switch to master branch and look at the commit history.</p>
                 <pre><code contenteditable class ="command-line ruby">
 $ git checkout master
 $ git log --oneline
@@ -415,38 +415,42 @@ $ git log --oneline
             <!-- Merging-->
             <section>
                 <h3>Merging</h3>
-                <h4>Merge to get changes from one branch into another*</h4>
-                <p>Switch to master and merge changes</p>
-                <pre><code contenteditable class ="command-line ruby">
+                <p><span class="green">Merge</span> to get changes from one branch into another.</p>
+                <p style="margin-top: 30px;">Switch to master and merge changes.</p>
+                <pre><code class ="command-line">
 $ git checkout master
 $ git merge feature
-        </code></pre>
-                <p>*rebase is another option, but will not be covered in this workshop</p>
+$ git log --oneline
+            </code></pre>
+            </section>
+            <section>
+                <h3>What could possibly go wrong?</h3>
+                <img src="images/merge-conflict.png" />
             </section>
             <section>
                 <h3>Merging</h3>
                 <h4>Merge conflicts</h4>
-                <p>Change first line in kitten.txt in master branch</p>
-                <pre><code contenteditable class ="command-line ruby">
+                <p>Change the first line in kitten.txt in master branch.</p>
+                <pre><code class ="command-line">
 $ git add kitten.txt
-$ git commit -m "Change first line in master"
-        </code></pre>
-                <p>Change first line in kitten.txt in feature branch</p>
-                <pre><code contenteditable class ="command-line ruby">
+$ git commit -m "Change kitten.txt in master."
+            </code></pre>
+                <p>Now change first line in kitten.txt in feature branch.</p>
+                <pre><code class ="command-line">
 $ git checkout feature
-# open kitten.txt and change first line
+# open kitten.txt and change the first line
 $ git add kitten.txt
-$ git commit -m "Change first line in feature"
-        </code></pre>
+$ git commit -m "Change kitten.txt in feature."
+            </code></pre>
             </section>
             <section>
                 <h3>Merging</h3>
                 <h4>Merge conflicts, cont.</h4>
-                <p>Merge from master into feature</p>
-                <pre><code contenteditable class ="command-line ruby">
-$ git merge master
-        </code></pre>
-                <p>You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+                <p>Merge the changes from master into the feature branch.</p>
+                <pre><code class ="command-line">
+$ git merge master #remember, you are on the feature branch here
+            </code></pre>
+                <p>You will be notified of a conflict. Go to the file in your editor and fix the problem. Then add and commit your edits.</p>
             </section>
             <!-- New repository-->
             <section>
