@@ -450,7 +450,20 @@ $ git commit -m "Change kitten.txt in feature."
                 <pre><code class ="command-line">
 $ git merge master #remember, you are on the feature branch here
             </code></pre>
-                <p>You will be notified of a conflict. Go to the file in your editor and fix the problem. Then add and commit your edits.</p>
+                <p>You will be notified of a conflict.</p>
+            </section>
+            <section>
+            	<h3>Merging</h3>
+                <h4>Merge conflicts, cont.</h4>
+            	<p> Go to kitten.txt in your editor and you'll see something like:</p>
+            	<pre><code>
+<<<<<<< HEAD
+Changing the first line on feature.
+=======
+Changing the first line on master.
+>>>>>>> master
+            	</code></pre>
+            	<p>Fix the problem. Then add and commit your edits.</p>
             </section>
             <!-- New repository-->
             <section>
